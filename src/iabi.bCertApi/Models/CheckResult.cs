@@ -1,5 +1,8 @@
 ﻿namespace iabi.bCertApi.Models
 {
+    /// <summary>
+    /// Check result of an IFC file.
+    /// </summary>
     public class CheckResult
     {
         /// <summary>

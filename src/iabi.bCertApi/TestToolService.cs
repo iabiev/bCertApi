@@ -8,6 +8,9 @@ using Newtonsoft.Json;
 
 namespace iabi.bCertApi
 {
+    /// <summary>
+    /// The default implementation for the b-Cert Test Tool API
+    /// </summary>
     public class TestToolService : ITestToolService
     {
         private readonly IHttpHandler _httpHandler;
@@ -38,11 +41,28 @@ namespace iabi.bCertApi
             _httpHandler = httpHandler ?? new bCertDefaultHttpHandler(apiKey);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ifcStream"></param>
+        /// <param name="fileName"></param>
+        /// <param name="modelViewDefinitionId"></param>
+        /// <param name="fetchJsonReport"></param>
+        /// <param name="fetchXmlReport"></param>
+        /// <returns></returns>
         public Task<CheckResult> CheckFileAgainstTestAsync(Stream ifcStream, string fileName, Guid modelViewDefinitionId, bool fetchJsonReport = true, bool fetchXmlReport = true)
         {
             return CheckFileAsync(ifcStream, fileName, fetchJsonReport, fetchXmlReport, modelViewDefinitionId);
         }
 
+        /// <summary>
+        /// Performs a global check report. The data present in the IFC file header will be
+        /// used to determine which Model View Definition to check against.
+        /// This will only return a Json result.
+        /// </summary>
+        /// <param name="ifcStream"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName)
         {
             return CheckFileAsync(ifcStream, fileName, true, false, null);
@@ -64,6 +84,10 @@ namespace iabi.bCertApi
             return checkResult;
         }
 
+        /// <summary>
+        /// Returns a list of all <see cref="Test"/>s and their test specific <see cref="ModelViewDefinition"/>s
+        /// </summary>
+        /// <returns></returns>
         public async Task<IList<Test>> GetAllTestsAsync()
         {
             var requestUrl = "/Api/TestTool/Tests";
