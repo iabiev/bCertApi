@@ -5,19 +5,21 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52050244-8C09-43DA-9E31-A0206B516A0A}"
 	ProjectSection(SolutionItems) = preProject
+		AppendxUnitFramework.ps1 = AppendxUnitFramework.ps1
 		LICENSE.md = LICENSE.md
 		README.md = README.md
+		Tests.ps1 = Tests.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E5DEFD3-B2F6-418B-A642-DF3E1F6637FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7A00BAD7-81E3-4CE6-A0F1-0C85E3341A15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iabi.bCertApi", "src\iabi.bCertApi\iabi.bCertApi.csproj", "{6EA1D1DB-B594-4AB9-9DFF-E35B3FE0B406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabi.bCertApi", "src\iabi.bCertApi\iabi.bCertApi.csproj", "{6EA1D1DB-B594-4AB9-9DFF-E35B3FE0B406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iabi.bCertApi.Tests", "test\iabi.bCertApi.Tests\iabi.bCertApi.Tests.csproj", "{7A5C3475-6FE1-493F-BEB7-F313E0BA4ACE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabi.bCertApi.Tests", "test\iabi.bCertApi.Tests\iabi.bCertApi.Tests.csproj", "{7A5C3475-6FE1-493F-BEB7-F313E0BA4ACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iabi.bCertApi.Console", "src\iabi.bCertApi.Console\iabi.bCertApi.Console.csproj", "{7DF51973-94B8-4A5F-905F-1FCF2C3C9A34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iabi.bCertApi.Console", "src\iabi.bCertApi.Console\iabi.bCertApi.Console.csproj", "{7DF51973-94B8-4A5F-905F-1FCF2C3C9A34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
