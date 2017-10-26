@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using iabi.bCertApi.Models;
 using System.Net.Http;
@@ -9,10 +8,8 @@ using Newtonsoft.Json;
 
 namespace iabi.bCertApi
 {
-
     public class TestToolService : ITestToolService
     {
-        private readonly string _apiKey;
         private readonly IHttpHandler _httpHandler;
 
         /// <param name="apiKey">If you do not have an Api Key for b-Cert, you can obtain one on the website in your account settings.</param>
