@@ -3,6 +3,28 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <LangVersion>Latest</LangVersion>
+    <Version>1.0.0</Version>
+    <Authors>iabi e.V.</Authors>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Copyright>(c) 2017 iabi e.V.</Copyright>
+    <AssemblyName>iabi.bCertApi</AssemblyName>
+    <PackageId>iabi.bCertApi</PackageId>
+    <Description>
+      This is the offical API client for the b-Cert API.
+      More information is available in the documentation section at www.b-cert.org
+    </Description>
+    <PackageReleaseNotes>
+      1.0.0:
+      Initial Release
+    </PackageReleaseNotes>
+    <PackageIconUrl>http://iabi.eu/wp-content/uploads/2014/10/Favicon_iabi.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <PackageProjectUrl>https://github.com/iabiev/bCertApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/iabiev/bCertApi.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
