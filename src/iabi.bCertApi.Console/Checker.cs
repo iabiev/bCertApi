@@ -35,7 +35,7 @@ namespace iabi.bCertApi.Console
                 }
                 else
                 {
-                    _checkResult = await _testToolService.CheckFileAsync(_fileStream, _fileName, _fetchJson, _fetchXml);
+                    _checkResult = await _testToolService.CheckFileAsync(_fileStream, _fileName);
                 }
             }
             await SaveResultsAndPrintErrorMessage();
