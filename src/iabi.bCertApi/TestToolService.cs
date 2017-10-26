@@ -43,9 +43,9 @@ namespace iabi.bCertApi
             return CheckFileAsync(ifcStream, fileName, fetchJsonReport, fetchXmlReport, modelViewDefinitionId);
         }
 
-        public Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName, bool fetchJsonReport = true, bool fetchXmlReport = true)
+        public Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName)
         {
-            return CheckFileAsync(ifcStream, fileName, fetchJsonReport, fetchXmlReport, null);
+            return CheckFileAsync(ifcStream, fileName, true, false, null);
         }
 
         private async Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName, bool fetchJsonReport = true, bool fetchXmlReport = true, Guid? mvdId = null)

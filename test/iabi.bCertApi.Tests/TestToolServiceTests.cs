@@ -86,7 +86,7 @@ namespace iabi.bCertApi.Tests
         {
             await _testToolService.CheckFileAsync(new MemoryStream(), "ifcfile.ifc");
             Assert.False(string.IsNullOrWhiteSpace(_calledUri));
-            var expectedUri = "/Api/TestTool/Check?jsonReport=True&xmlReport=True";
+            var expectedUri = "/Api/TestTool/Check?jsonReport=True&xmlReport=False";
             Assert.Equal(expectedUri, _calledUri);
         }
 

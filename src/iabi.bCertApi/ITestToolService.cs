@@ -17,7 +17,7 @@ namespace iabi.bCertApi
         /// <param name="ifcStream"></param>
         /// <param name="fileName">The file name should include the extension. It is used to determine whether this is an ifcZIP or not.</param>
         /// <returns></returns>
-        Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName, bool fetchJsonReport = true, bool fetchXmlReport = true);
+        Task<CheckResult> CheckFileAsync(Stream ifcStream, string fileName);
 
         /// <summary>
         /// Performs a check against a test-specific ModelViewDefinition. The <see cref="GetAllTestsAsync"/> methods returns tests
