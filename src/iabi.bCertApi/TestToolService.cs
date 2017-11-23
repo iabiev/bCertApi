@@ -81,6 +81,13 @@ namespace iabi.bCertApi
             requestMessage.Content = formContent;
             var response = await _httpHandler.SendMessageAsync(requestMessage);
             var checkResult = await ReadAsJsonAsync<CheckResult>(response);
+            if (checkResult == null)
+            {
+                return new CheckResult
+                {
+                    ErrorMessage = $"Failed to deserialize response. Http status code: {response.StatusCode}"
+                };
+            }
             return checkResult;
         }
 
