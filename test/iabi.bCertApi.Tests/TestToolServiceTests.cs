@@ -95,7 +95,9 @@ namespace iabi.bCertApi.Tests
         {
             _returnHttpError = true;
             var checkResult = await _testToolService.CheckFileAsync(new MemoryStream(), "ifcfile.ifc");
-            Assert.Null(checkResult);
+            Assert.Null(checkResult.Json);
+            Assert.Null(checkResult.Xml);
+            Assert.NotNull(checkResult.ErrorMessage);
         }
 
         private HttpResponseMessage GetTestsResponse()
